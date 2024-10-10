@@ -1,0 +1,118 @@
+/* Body & Background */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    overflow: hidden;
+}
+
+.background-image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url('bg.jpg') no-repeat center center/cover;
+    z-index: -1;
+    filter: blur(5px);
+}
+
+/* Main Container */
+.container {
+    width: 80%;
+    max-width: 600px;
+    margin: 80px auto;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Logo and Title */
+.logo {
+    width: 100px;
+    height: auto;
+}
+
+h1 {
+    font-size: 36px;
+    color: #ff6347;
+    margin-bottom: 30px;
+    font-weight: bold;
+}
+
+/* URL Shortener Container */
+.url-shortener {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+
+/* Triangle-shaped Input */
+.triangle-input, .triangle-output {
+    position: relative;
+    width: 300px;
+    height: 60px;
+    overflow: hidden;
+}
+
+.triangle-input::before, .triangle-output::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
+    z-index: -1;
+}
+
+.input-box, .output-box {
+    width: 100%;
+    padding: 15px;
+    font-size: 18px;
+    border-radius: 25px;
+    border: 1px solid #ddd;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Shorten Button */
+.shorten-btn {
+    background-color: #ff6347;
+    color: white;
+    padding: 15px;
+    border-radius: 25px;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.shorten-btn:hover {
+    background-color: #ff4500;
+}
+
+/* Copy Button */
+.copy-btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    border-radius: 25px;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.copy-btn:hover {
+    background-color: #45a049;
+}
+
+/* Triangle Output Shape */
+.triangle-output .output-box {
+    background-color: #f1f1f1;
+    cursor: not-allowed;
+}

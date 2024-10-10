@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QUICKSHORTNER</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="background-image"></div>
+
+    <div class="container">
+        <header>
+            <img src="logo.jpg" alt="QuickShortner Logo" class="logo">
+            <h1>QUICKSHORTNER</h1>
+        </header>
+        
+        <div class="url-shortener">
+            <div class="triangle-input">
+                <input type="text" id="input-url" placeholder="Enter the URL here" class="input-box">
+            </div>
+            
+            <button onclick="generateShortUrl()" class="shorten-btn">Shorten URL</button>
+            
+            <div class="triangle-output">
+                <input type="text" id="output-url" placeholder="Shortened URL will appear here" class="output-box" readonly>
+            </div>
+            
+            <button onclick="copyToClipboard()" class="copy-btn">Copy URL</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
